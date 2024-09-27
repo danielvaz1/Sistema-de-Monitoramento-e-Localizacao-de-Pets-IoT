@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "Daniel Vaz",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": -4.8, "left": -48.5, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -182.1, "left": 186.6, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "imu1", "top": 80.62, "left": -36.08, "attrs": {} }
+  ],
+  "connections": [
+    [ "dht1:VCC", "nano:5V", "red", [ "v172.8", "h-124.8", "v-48" ] ],
+    [ "dht1:SDA", "nano:7", "green", [ "v38.4", "h-191.9" ] ],
+    [ "imu1:VCC", "nano:5V", "red", [ "v-19.2", "h38.48" ] ],
+    [ "dht1:GND", "nano:GND.2", "black", [ "v57.6", "h-153.6", "v-9.6" ] ],
+    [ "imu1:GND", "nano:GND.1", "black", [ "v-9.6", "h67.28" ] ],
+    [ "imu1:SDA", "nano:A4", "green", [ "v0" ] ],
+    [ "imu1:SCL", "nano:A5", "green", [ "v-19.2", "h28.88" ] ]
+  ],
+  "dependencies": {}
+}
